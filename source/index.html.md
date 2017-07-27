@@ -432,7 +432,7 @@ cut_off_dates | Cutoff Dates
 addtional_terms | Additional Terms
 reporting_party_id | Reporting Party
 
-### For an Interest Rate Deal
+### For an Interest Rate  Deal
 Parameter | Description |
 
 ### For a Commodities Deal
