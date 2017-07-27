@@ -210,6 +210,195 @@ sdr_reportable | Whether the deal is currently SDR Reportable, defaults to false
 
 # Terms
 ## Get Specific Terms
+
+### Parameters
+
+The following attributes outline the possible set of parameters you will find on Deal Terms.
+
+Parameter | Description | Commodity Swap | Commodity Cap/Floor | Currency Forward | Interest Rate Swap | Interest Rate Cap/Floor
+--------- | ----------- |  ----------- |  ----------- |  ----------- |  ----------- |  ----------- |
+id | | | | | | |
+entity_id | | | | | | |
+deal_id | | | | | | |
+reporting_party_id | | | | | | |
+fixed_payer_id | | | | | | |
+float_payer_id | | | | | | |
+created_at | | | | | | |
+updated_at | | | | | | |
+expiration | | | | | | |
+trade_date | | | | | | |
+effective_date | | | | | | |
+maturity_date | | | | | | |
+cut_off_dates | | | | | | |
+compounding | | | | | | |
+calculation_agent_id | | | | | | |
+negative_interest_rate_method | | | | | | |
+isda_definitions | | | | | | |
+fixed_notional | | | | | | |
+fixed_notional_currency | | | | | | |
+fixed_payment_frequency | | | | | | |
+fixed_accrual_basis | | | | | | |
+fixed_period_end_dates | | | | | | |
+fixed_first_period_end_date | | | | | | |
+fixed_period_business_day_convention | | | | | | |
+fixed_period_business_day_center | | | | | | |
+fixed_settlement_dates | | | | | | |
+fixed_first_settlement_date | | | | | | |
+fixed_settlement_business_day_convention | | | | | | |
+fixed_settlement_business_day_center | | | | | | |
+fixed_rate | | | | | | |
+float_notional | | | | | | |
+float_notional_currency | | | | | | |
+float_payment_frequency | | | | | | |
+float_accrual_basis | | | | | | |
+float_period_end_dates | | | | | | |
+float_first_period_end_date | | | | | | |
+float_period_business_day_convention | | | | | | |
+float_period_business_day_center | | | | | | |
+float_settlement_dates | | | | | | |
+float_first_settlement_date | | | | | | |
+float_settlement_business_day_convention | | | | | | |
+float_settlement_business_day_center | | | | | | |
+float_reset_dates | | | | | | |
+float_first_reset_date | | | | | | |
+float_reset_business_day_convention | | | | | | |
+float_reset_business_day_center | | | | | | |
+float_spread | | | | | | |
+float_first_period_rate | | | | | | |
+float_index_maturity | | | | | | |
+additional_terms | | | | | | |
+fixed_notional_units | | | | | | |
+fixed_notional_per_period | | | | | | |
+specified_price | | | | | | |
+averaging_method | | | | | | |
+currency_conversion_provision | | | | | | |
+delivery_date | | | | | | |
+disruption_event | | | | | | |
+disruption_fallback | | | | | | |
+disruption_maximum_days | | | | | | |
+electricity_settlement_days | | | | | | |
+electricity_settlement_duration | | | | | | |
+electricity_settlement_start | | | | | | |
+electricity_settlement_stop | | | | | | |
+side1_entity_id | | | | | | |
+side1_buy_sell | | | | | | |
+side1_notional | | | | | | |
+side1_currency | | | | | | |
+side2_entity_id | | | | | | |
+side2_buy_sell | | | | | | |
+side2_notional | | | | | | |
+side2_currency | | | | | | |
+settlement_type | | | | | | |
+settlement_currency | | | | | | |
+valuation_date | | | | | | |
+disruption_details | | | | | | |
+float_notional_per_period | | | | | | |
+party_a_sec_5_a_v | | | | | | |
+party_a_sec_5_a_vi | | | | | | |
+party_a_sec_5_a_vii | | | | | | |
+party_a_sec_5_b_v | | | | | | |
+party_b_sec_5_a_v | | | | | | |
+party_b_sec_5_a_vi | | | | | | |
+party_b_sec_5_a_vii | | | | | | |
+party_b_sec_5_b_v | | | | | | |
+specified_transaction | | | | | | |
+party_a_cross_default | | | | | | |
+party_b_cross_default | | | | | | |
+specified_indebtedness | | | | | | |
+threshold_amount | | | | | | |
+party_a_credit_event | | | | | | |
+party_b_credit_event | | | | | | |
+party_a_auto_early_term | | | | | | |
+party_b_auto_early_term | | | | | | |
+termination_currency | | | | | | |
+party_a_additional_term | | | | | | |
+party_b_additional_term | | | | | | |
+party_a_sec_3_e | | | | | | |
+party_a_sec_3_e_rep | | | | | | |
+party_b_sec_3_e | | | | | | |
+party_b_sec_3_e_rep | | | | | | |
+party_a_sec_3_f | | | | | | |
+party_a_sec_3_f_rep | | | | | | |
+party_a_sec_3_f_treaty | | | | | | |
+party_a_sec_3_f_jurisdiction | | | | | | |
+party_b_sec_3_f | | | | | | |
+party_b_sec_3_f_rep | | | | | | |
+party_b_sec_3_f_treaty | | | | | | |
+party_b_sec_3_f_jurisdiction | | | | | | |
+party_a_address | | | | | | |
+party_a_attention | | | | | | |
+party_a_telex | | | | | | |
+party_a_answerback | | | | | | |
+party_a_facsimile | | | | | | |
+party_a_telephone | | | | | | |
+party_a_email | | | | | | |
+party_a_electronic_messaging | | | | | | |
+party_a_specific_instructions | | | | | | |
+party_b_address | | | | | | |
+party_b_attention | | | | | | |
+party_b_telex | | | | | | |
+party_b_answerback | | | | | | |
+party_b_facsimile | | | | | | |
+party_b_telephone | | | | | | |
+party_b_email | | | | | | |
+party_b_electronic_messaging | | | | | | |
+party_b_specific_instructions | | | | | | |
+party_a_process_agent | | | | | | |
+party_b_process_agent | | | | | | |
+offices | | | | | | |
+party_a_multiparty_branch | | | | | | |
+party_a_multiparty_branch_offices | | | | | | |
+party_b_multiparty_branch | | | | | | |
+party_b_multiparty_branch_offices | | | | | | |
+isda_ma_calculation_agent | | | | | | |
+party_a_credit_support_documents | | | | | | |
+party_b_credit_support_documents | | | | | | |
+party_a_credit_support_provider | | | | | | |
+party_b_credit_support_provider | | | | | | |
+netting | | | | | | |
+netting_details | | | | | | |
+netting_effective_date | | | | | | |
+affiliate | | | | | | |
+party_a_absence_of_litigation | | | | | | |
+party_b_absence_of_litigation | | | | | | |
+no_agency | | | | | | |
+additional_representations | | | | | | |
+recording_conversations | | | | | | |
+other_provisions | | | | | | |
+party_a_additional_credit_support | | | | | | |
+party_a_valuation_percentage | | | | | | |
+party_b_additional_credit_support | | | | | | |
+party_b_valuation_percentage | | | | | | |
+party_a_independent_amount | | | | | | |
+party_b_independent_amount | | | | | | |
+party_a_posted_credit_support | | | | | | |
+party_b_posted_credit_support | | | | | | |
+base_currency | | | | | | |
+valuation_date_city | | | | | | |
+valuation_time_city | | | | | | |
+existing_csa | | | | | | |
+accepted_by_user_id | | | | | | |
+state | | | | | | |
+offered_to_entity_id | | | | | | |
+in_response_to_offer_id | | | | | | |
+governing_law | | | | | | |
+settlement_day | | | | | | |
+party_a_demands_and_notices | | | | | | |
+party_b_demands_and_notices | | | | | | |
+accepted_at | | | | | | |
+created_by_user_id | | | | | | |
+relationship_id | | | | | | |
+common_pricing | | | | | | |
+float_index_id | | | | | | |
+disruption_fallback_price_id | | | | | | |
+strike_price | | | | | | |
+instrument_subtype | | | | | | |
+
+
+```json
+
+
+```
 ## Add Terms to a deal
 
 # Products
