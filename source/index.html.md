@@ -401,6 +401,43 @@ instrument_subtype | | | | | | |
 ```
 ## Add Terms to a deal
 
+### For a Currency deal
+Parameter | Description |
+entity_id |
+in_response_to_offer_id |
+expiration | Offer Expiration |
+side1_entity_id | Party 1
+side1_buy_sell | Buy/Sell
+side1_notional | Notional
+side1_currency | Currency
+side2_entity_id | Party 2
+side2_buy_sell | Buy/Sell
+side2_notional | Notional
+side2_currency | Currency
+maturity_date | Settlement Date
+forward_rate | Forward Rate
+settlement_type | Settlement Type
+settlement_currency | Settlement Currency
+valuation_date | Valuation Date
+float_index_id | 'Settlement Rate Option
+fixed_settlement_business_day_convention | Settlement Adjustment
+fixed_settlement_business_day_center | Settlement Holiday Calendar
+disruption_event | Market Disruption Events
+disruption_fallback | Disruption Fallbacks
+disruption_fallback_price_id | Fallback Reference Price
+disruption_details | Disruption Fallback Details
+isda_definitions | ISDA Definitions
+calculation_agent | Calculation Agent
+cut_off_dates | Cutoff Dates
+addtional_terms | Additional Terms
+reporting_party_id | Reporting Party
+
+### For an Interest Rate Deal
+Parameter | Description |
+
+### For a Commodities Deal
+Parameter | Description |
+
 # Products
 ## List All Products
 
