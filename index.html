@@ -463,43 +463,43 @@ created, structured like this:</p>
 </thead><tbody>
 <tr>
 <td>id</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Internal numeric ID of the terms</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr>
 <td>entity_id</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Internal entity ID of the entity proposing the terms</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr>
 <td>deal_id</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Internal numeric deal Identifier</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr>
 <td>reporting_party_id</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Entity ID of the party who will report to the SDR</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr>
 <td>fixed_payer_id</td>
-<td></td>
+<td>Fixed Rate Payer</td>
 <td></td>
 <td></td>
 <td></td>
@@ -508,7 +508,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>float_payer_id</td>
-<td></td>
+<td>Floating Rate Payer</td>
 <td></td>
 <td></td>
 <td></td>
@@ -517,7 +517,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>created_at</td>
-<td></td>
+<td>Date of creation</td>
 <td></td>
 <td></td>
 <td></td>
@@ -526,7 +526,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>updated_at</td>
-<td></td>
+<td>Last Updated Date</td>
 <td></td>
 <td></td>
 <td></td>
@@ -535,7 +535,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>expiration</td>
-<td></td>
+<td>Date this offer expires</td>
 <td></td>
 <td></td>
 <td></td>
@@ -544,7 +544,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>trade_date</td>
-<td></td>
+<td>Date of the trade</td>
 <td></td>
 <td></td>
 <td></td>
@@ -553,7 +553,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>effective_date</td>
-<td></td>
+<td>Effective date of the deal</td>
 <td></td>
 <td></td>
 <td></td>
@@ -562,7 +562,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>maturity_date</td>
-<td></td>
+<td>Maturity date of the instrument</td>
 <td></td>
 <td></td>
 <td></td>
@@ -571,7 +571,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>cut_off_dates</td>
-<td></td>
+<td>A text list of dates: eg: &lsquo;3/31, 6/30, 9/30, 12/31&rsquo;</td>
 <td></td>
 <td></td>
 <td></td>
@@ -580,7 +580,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>compounding</td>
-<td></td>
+<td>Counpounding Type (text)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -589,7 +589,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>calculation_agent_id</td>
-<td></td>
+<td>numeric ID of the Calculation Agent (one of the deal participants)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -598,7 +598,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>negative_interest_rate_method</td>
-<td></td>
+<td>or &lsquo;Not Applicable&rsquo;</td>
 <td></td>
 <td></td>
 <td></td>
@@ -634,7 +634,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>fixed_payment_frequency</td>
-<td></td>
+<td>&lsquo;Annual&rsquo;,&lsquo;Semi-Annual&rsquo;,&lsquo;Quarterly&rsquo;,&lsquo;Monthly&rsquo;,&lsquo;Daily&rsquo;</td>
 <td></td>
 <td></td>
 <td></td>
@@ -643,7 +643,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>fixed_accrual_basis</td>
-<td></td>
+<td>One of:  [&lsquo;30/360&rsquo;, &lsquo;Actual/Actual&rsquo;, &lsquo;Actual/Actual (ICMA)&rsquo;, &lsquo;Actual/365&rsquo;, &lsquo;Actual/360&rsquo;, &lsquo;1/1&rsquo;]</td>
 <td></td>
 <td></td>
 <td></td>
@@ -670,7 +670,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>fixed_period_business_day_convention</td>
-<td></td>
+<td>One of: &lsquo;Following&rsquo;,&lsquo;Preceding&rsquo;,&lsquo;No Adjustment&rsquo;,&lsquo;Modified Following&rsquo;</td>
 <td></td>
 <td></td>
 <td></td>
@@ -679,7 +679,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>fixed_period_business_day_center</td>
-<td></td>
+<td>One Of: [&lsquo;New York&rsquo;,&lsquo;London&rsquo;,&lsquo;Frankfurt&rsquo;,&lsquo;Rome&rsquo;,&lsquo;Paris&rsquo;,&lsquo;Hong Kong&rsquo;,&lsquo;Tokyo&rsquo;,&lsquo;Singapore&rsquo;,&lsquo;Sydney&rsquo;]</td>
 <td></td>
 <td></td>
 <td></td>
@@ -706,7 +706,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>fixed_settlement_business_day_convention</td>
-<td></td>
+<td>One of: &lsquo;Following&rsquo;,&lsquo;Preceding&rsquo;,&lsquo;No Adjustment&rsquo;,&lsquo;Modified Following&rsquo;</td>
 <td></td>
 <td></td>
 <td></td>
@@ -715,7 +715,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>fixed_settlement_business_day_center</td>
-<td></td>
+<td>One Of: [&lsquo;New York&rsquo;,&lsquo;London&rsquo;,&lsquo;Frankfurt&rsquo;,&lsquo;Rome&rsquo;,&lsquo;Paris&rsquo;,&lsquo;Hong Kong&rsquo;,&lsquo;Tokyo&rsquo;,&lsquo;Singapore&rsquo;,&lsquo;Sydney&rsquo;]</td>
 <td></td>
 <td></td>
 <td></td>
@@ -751,7 +751,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>float_payment_frequency</td>
-<td></td>
+<td>&lsquo;Annual&rsquo;,&lsquo;Semi-Annual&rsquo;,&lsquo;Quarterly&rsquo;,&lsquo;Monthly&rsquo;,&lsquo;Daily&rsquo;</td>
 <td></td>
 <td></td>
 <td></td>
@@ -760,7 +760,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>float_accrual_basis</td>
-<td></td>
+<td>One of:  [&lsquo;30/360&rsquo;, &lsquo;Actual/Actual&rsquo;, &lsquo;Actual/Actual (ICMA)&rsquo;, &lsquo;Actual/365&rsquo;, &lsquo;Actual/360&rsquo;, &lsquo;1/1&rsquo;]</td>
 <td></td>
 <td></td>
 <td></td>
@@ -787,7 +787,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>float_period_business_day_convention</td>
-<td></td>
+<td>One of: &lsquo;Following&rsquo;,&lsquo;Preceding&rsquo;,&lsquo;No Adjustment&rsquo;,&lsquo;Modified Following&rsquo;</td>
 <td></td>
 <td></td>
 <td></td>
@@ -796,7 +796,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>float_period_business_day_center</td>
-<td></td>
+<td>One Of: [&lsquo;New York&rsquo;,&lsquo;London&rsquo;,&lsquo;Frankfurt&rsquo;,&lsquo;Rome&rsquo;,&lsquo;Paris&rsquo;,&lsquo;Hong Kong&rsquo;,&lsquo;Tokyo&rsquo;,&lsquo;Singapore&rsquo;,&lsquo;Sydney&rsquo;]</td>
 <td></td>
 <td></td>
 <td></td>
@@ -823,7 +823,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>float_settlement_business_day_convention</td>
-<td></td>
+<td>One of: &lsquo;Following&rsquo;,&lsquo;Preceding&rsquo;,&lsquo;No Adjustment&rsquo;,&lsquo;Modified Following&rsquo;</td>
 <td></td>
 <td></td>
 <td></td>
@@ -832,7 +832,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>float_settlement_business_day_center</td>
-<td></td>
+<td>One Of: [&lsquo;New York&rsquo;,&lsquo;London&rsquo;,&lsquo;Frankfurt&rsquo;,&lsquo;Rome&rsquo;,&lsquo;Paris&rsquo;,&lsquo;Hong Kong&rsquo;,&lsquo;Tokyo&rsquo;,&lsquo;Singapore&rsquo;,&lsquo;Sydney&rsquo;]</td>
 <td></td>
 <td></td>
 <td></td>
@@ -868,7 +868,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>float_reset_business_day_center</td>
-<td></td>
+<td>One Of: [&lsquo;New York&rsquo;,&lsquo;London&rsquo;,&lsquo;Frankfurt&rsquo;,&lsquo;Rome&rsquo;,&lsquo;Paris&rsquo;,&lsquo;Hong Kong&rsquo;,&lsquo;Tokyo&rsquo;,&lsquo;Singapore&rsquo;,&lsquo;Sydney&rsquo;]</td>
 <td></td>
 <td></td>
 <td></td>
@@ -967,16 +967,16 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>disruption_event</td>
+<td>&lsquo;None&rsquo;,&lsquo;Price Source Disruption&rsquo;,&lsquo;Benchmark Obligation Default&rsquo;,&lsquo;Dual Exchange Rate&rsquo;,&lsquo;General Inconvertibility&rsquo;,&lsquo;General Nontransferability&rsquo;,&lsquo;General Inconvertibility/Nontransferability&rsquo;,&lsquo;Governmental Authority Default&rsquo;,&lsquo;Illiquidity&rsquo;,&lsquo;Material Change in Circumstance&rsquo;,&lsquo;Nationalization&rsquo;,&lsquo;Price Materiality&rsquo;,&lsquo;Specific Inconvertibility&rsquo;,&lsquo;Specific Nontransferability&rsquo;,&lsquo;Party Specific Event&rsquo;</td>
 <td></td>
-<td></td>
-<td></td>
+<td>X</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>disruption_fallback</td>
-<td></td>
+<td>&lsquo;Fallback Reference Price&rsquo;,&lsquo;Calculation Agent Determination of Settlement Rate&rsquo;,&lsquo;Assignment of Claim&rsquo;,&lsquo;Deliverable Substitute&rsquo;,&lsquo;Escrow Arrangement&rsquo;,&lsquo;Local Asset Substitute Gross&rsquo;,&lsquo;Local Asset Substitute Net&rsquo;,&lsquo;Local Currency Substitute&rsquo;,&lsquo;No Fault Determination&rsquo;,&lsquo;Non-Deliverable Substitute&rsquo;,&lsquo;Settlement Postponement&rsquo;]</td>
 <td></td>
 <td></td>
 <td></td>
@@ -994,7 +994,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>electricity_settlement_days</td>
-<td></td>
+<td>Integer number of days</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1327,7 +1327,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>party_a_sec_3_e</td>
-<td></td>
+<td>See legal language options below</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1336,7 +1336,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>party_a_sec_3_e_rep</td>
-<td></td>
+<td>If the party makes reps, freeform text here.</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1345,7 +1345,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>party_b_sec_3_e</td>
-<td></td>
+<td>See legal language options below</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1354,7 +1354,7 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>party_b_sec_3_e_rep</td>
-<td></td>
+<td>If the party makes reps, freeform text here.</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1849,8 +1849,8 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>party_a_posted_credit_support</td>
-<td></td>
-<td></td>
+<td>Paragraph 6&copy; [will not</td>
+<td>will] apply</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1858,8 +1858,8 @@ created, structured like this:</p>
 </tr>
 <tr>
 <td>party_b_posted_credit_support</td>
-<td></td>
-<td></td>
+<td>Paragraph 6&copy; [will not</td>
+<td>will] apply</td>
 <td></td>
 <td></td>
 <td></td>
@@ -2046,6 +2046,101 @@ created, structured like this:</p>
 <td></td>
 </tr>
 </tbody></table>
+
+<p>Options for the legal language sections are listed below:</p>
+
+<h4 id="sec_3_e">sec_3_e</h4>
+
+<p>[&lsquo;Does not make any representations&rsquo;,
+   &lsquo;It is not required by any applicable law, as modified by the practice &rsquo; \
+   &lsquo;of any relevant governmental revenue authority, of any Relevant &rsquo; \
+   &lsquo;Jurisdiction to make any deduction or withholding for or on account &rsquo; \
+   &lsquo;of any Tax from any payment (other than interest under Section 9(h) of &rsquo; \
+   &lsquo;this Agreement) to be made by it to the other party under this &rsquo; \
+   &lsquo;Agreement. In making this representation, it may rely on (i) the &rsquo; \
+   &lsquo;accuracy of any representations made by the other party pursuant to &rsquo; \
+   &lsquo;Section 3(f) of this Agreement, (ii) the satisfaction of the agreement &rsquo; \
+   &lsquo;contained in Section 4(a)(i) or 4(a)(iii) of this Agreement and the &rsquo; \
+   &lsquo;accuracy and effectiveness of any document provided by the other party &rsquo; \
+   &lsquo;pursuant to Section 4(a)(i) or 4(a)(iii) of this Agreement and (iii) &rsquo; \
+   &lsquo;the satisfaction of the agreement of the other party contained in &rsquo; \
+   &lsquo;Section 4(d) of this Agreement, except that it will not be a breach of &rsquo; \
+   &lsquo;this representation where reliance is placed on clause (ii) above and &rsquo; \
+   &lsquo;the other party does not deliver a form or document under Section &rsquo; \
+   &lsquo;4(a)(iii) by reason of material prejudice to its legal or commercial &rsquo; \
+   &lsquo;position.&rsquo;,
+   &lsquo;Makes the following representations:&rsquo;</p>
+
+<h4 id="sec_3_f">sec_3_f</h4>
+
+<p>[&lsquo;Does not make any representations&rsquo;,</p>
+
+<p>&lsquo;It is fully eligible for the benefits of the “Business Profits” or &rsquo; \
+   &lsquo;“Industrial and Commercial Profits” provision, as the case may be, the &rsquo; \
+   &lsquo;“interest” provision or the “Other Income” provision, if any, of the &rsquo; \
+   &lsquo;Specified Treaty with respect to any payment described in such &rsquo; \
+   &lsquo;provisions and received or to be received by it in connection with &rsquo; \
+   &lsquo;this Agreement and no such payment is attributable to a trade or &rsquo; \
+   &lsquo;business carried on by it through a permanent establishment in the &rsquo; \
+   &lsquo;Specified Jurisdiction.&rsquo;,</p>
+
+<p>&lsquo;Each payment received or to be received by it in connection with this &rsquo; \
+   &lsquo;Agreement will be effectively connected with its conduct of a trade or &rsquo; \
+   &lsquo;business in the Specified Jurisdiction.&rsquo;,</p>
+
+<p>&lsquo;It is a “U.S. person” (as that term is used in section &rsquo; \
+   &lsquo;1.1441-4(a)(3)(ii) of United States Treasury Regulations) for United &rsquo; \
+   &lsquo;States federal income tax purposes.&rsquo;,</p>
+
+<p>&lsquo;It is a “non-U.S. branch of a foreign person” (as that term is used &rsquo; \
+   &lsquo;in section 1.1441-4(a)(3)(ii) of United States Treasury Regulations) &rsquo; \
+   &lsquo;for United States federal income tax purposes.&rsquo;,</p>
+
+<p>&lsquo;With respect to payments made to an address outside the United States &rsquo; \
+   &lsquo;or made by a transfer of funds to an account outside the United &rsquo; \
+   &lsquo;States, it is a “non-U.S. branch of a foreign person” (as that term is &rsquo; \
+   &lsquo;used in section 1.1441-4(a)(3)(ii) of United States Treasury &rsquo; \
+   &lsquo;Regulations) for United States federal income tax purposes.&rsquo;,</p>
+
+<p>&lsquo;It is a “foreign person” (as that term is used in section &rsquo; \
+   &lsquo;1.6041-4(a)(4) of United States Treasury Regulations) for United &rsquo; \
+   &lsquo;States federal income tax purposes.&rsquo;,</p>
+
+<p>&lsquo;Makes the following representations:&rsquo;]</p>
+
+<h4 id="recording_conversations">recording_conversations</h4>
+
+<p>[&lsquo;Not applicable&rsquo;,
+   &lsquo;Each party (i) consents to the recording of telephone conversations &rsquo; \
+   &lsquo;between the trading, marketing and other relevant personnel of the &rsquo; \
+   &lsquo;parties in connection with this Agreement or any potential Transaction,&rsquo; \
+   &lsquo; (ii) agrees to obtain any necessary consent of, and give any &rsquo; \
+   &lsquo;necessary notice of such recording to, its relevant personnel and &rsquo; \
+   &lsquo;(iii) agrees, to the extent permitted by applicable law, that &rsquo; \
+   &lsquo;recordings may be submitted in evidence in any Proceedings.&rsquo;]</p>
+
+<h4 id="settlement_day">settlement_day</h4>
+
+<p>[&lsquo;One Local Business day immediately following such date&rsquo;,
+   &lsquo;Two Local Business days immediately following such date&rsquo;,
+   &lsquo;The same date&rsquo;]</p>
+
+<h4 id="additional_representations">additional_representations</h4>
+
+<p>[&lsquo;The Parties do not make any Additional Representations&rsquo;,
+   &lsquo;The Parties make the following Additional Representations:&rsquo;]</p>
+
+<h4 id="netting">netting</h4>
+
+<p>[&lsquo;Will not apply&rsquo;,
+   &lsquo;Will apply to all Transactions&rsquo;,
+   &lsquo;Will apply to the following Transactions or groups of Transactions:&rsquo;]</p>
+
+<h4 id="multiparty_branch">multiparty_branch</h4>
+
+<p>[&lsquo;Party is not a Multibranch Party&rsquo;,
+   &lsquo;Party is a Multibranch Party and may enter into a Transaction through &rsquo; \
+   &lsquo;any of the following Offices:&rsquo;]</p>
 <pre class="highlight json tab-json"><code><span class="w">
 
 </span></code></pre>
@@ -2070,7 +2165,7 @@ forward_rate | Forward Rate
 settlement_type | Settlement Type
 settlement_currency | Settlement Currency
 valuation_date | Valuation Date
-float_index_id | &lsquo;Settlement Rate Option
+float_index_id | Settlement Rate Option
 fixed_settlement_business_day_convention | Settlement Adjustment
 fixed_settlement_business_day_center | Settlement Holiday Calendar
 disruption_event | Market Disruption Events
@@ -2083,7 +2178,7 @@ cut_off_dates | Cutoff Dates
 addtional_terms | Additional Terms
 reporting_party_id | Reporting Party</p>
 
-<h3 id="for-an-interest-rate-deal">For an Interest Rate Deal</h3>
+<h3 id="for-an-interest-rate-deal">For an Interest Rate  Deal</h3>
 
 <p>Parameter | Description |</p>
 
