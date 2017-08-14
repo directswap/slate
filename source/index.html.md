@@ -217,52 +217,52 @@ The following attributes outline the possible set of parameters you will find on
 
 Parameter | Description | Commodity Swap | Commodity Cap/Floor | Currency Forward | Interest Rate Swap | Interest Rate Cap/Floor
 --------- | ----------- |  ----------- |  ----------- |  ----------- |  ----------- |  ----------- |
-id | | | | | | |
-entity_id | | | | | | |
-deal_id | | | | | | |
-reporting_party_id | | | | | | |
-fixed_payer_id | | | | | | |
-float_payer_id | | | | | | |
-created_at | | | | | | |
-updated_at | | | | | | |
-expiration | | | | | | |
-trade_date | | | | | | |
-effective_date | | | | | | |
-maturity_date | | | | | | |
-cut_off_dates | | | | | | |
-compounding | | | | | | |
-calculation_agent_id | | | | | | |
-negative_interest_rate_method | | | | | | |
+id | Internal numeric ID of the terms| X | X | X | X | X |
+entity_id | Internal entity ID of the entity proposing the terms| X | X | X | X | X |
+deal_id | Internal numeric deal Identifier | X | X | X | X | X |
+reporting_party_id | Entity ID of the party who will report to the SDR| X | X | X | X | X |
+fixed_payer_id | Fixed Rate Payer | | | | | |
+float_payer_id | Floating Rate Payer | | | | | |
+created_at | Date of creation | | | | | |
+updated_at | Last Updated Date | | | | | |
+expiration | Date this offer expires | | | | | |
+trade_date | Date of the trade| | | | | |
+effective_date | Effective date of the deal | | | | | |
+maturity_date | Maturity date of the instrument | | | | | |
+cut_off_dates | A text list of dates: eg: '3/31, 6/30, 9/30, 12/31' | | | | | |
+compounding | Counpounding Type (text) | | | | | |
+calculation_agent_id | numeric ID of the Calculation Agent (one of the deal participants)| | | | | |
+negative_interest_rate_method | or 'Not Applicable'| | | | | |
 isda_definitions | | | | | | |
 fixed_notional | | | | | | |
 fixed_notional_currency | | | | | | |
-fixed_payment_frequency | | | | | | |
-fixed_accrual_basis | | | | | | |
+fixed_payment_frequency |'Annual','Semi-Annual','Quarterly','Monthly','Daily' | | | | | |
+fixed_accrual_basis | One of:  ['30/360', 'Actual/Actual', 'Actual/Actual (ICMA)', 'Actual/365', 'Actual/360', '1/1']| | | | | |
 fixed_period_end_dates | | | | | | |
 fixed_first_period_end_date | | | | | | |
-fixed_period_business_day_convention | | | | | | |
-fixed_period_business_day_center | | | | | | |
+fixed_period_business_day_convention |One of: 'Following','Preceding','No Adjustment','Modified Following' | | | | | |
+fixed_period_business_day_center |One Of: ['New York','London','Frankfurt','Rome','Paris','Hong Kong','Tokyo','Singapore','Sydney']| | | | | |
 fixed_settlement_dates | | | | | | |
 fixed_first_settlement_date | | | | | | |
-fixed_settlement_business_day_convention | | | | | | |
-fixed_settlement_business_day_center | | | | | | |
+fixed_settlement_business_day_convention |One of: 'Following','Preceding','No Adjustment','Modified Following'| | | | | |
+fixed_settlement_business_day_center |One Of: ['New York','London','Frankfurt','Rome','Paris','Hong Kong','Tokyo','Singapore','Sydney']| | | | | |
 fixed_rate | | | | | | |
 float_notional | | | | | | |
 float_notional_currency | | | | | | |
-float_payment_frequency | | | | | | |
-float_accrual_basis | | | | | | |
+float_payment_frequency |'Annual','Semi-Annual','Quarterly','Monthly','Daily'| | | | | |
+float_accrual_basis | One of:  ['30/360', 'Actual/Actual', 'Actual/Actual (ICMA)', 'Actual/365', 'Actual/360', '1/1']| | | | | |
 float_period_end_dates | | | | | | |
 float_first_period_end_date | | | | | | |
-float_period_business_day_convention | | | | | | |
-float_period_business_day_center | | | | | | |
+float_period_business_day_convention |One of: 'Following','Preceding','No Adjustment','Modified Following'  | | | | | |
+float_period_business_day_center |One Of: ['New York','London','Frankfurt','Rome','Paris','Hong Kong','Tokyo','Singapore','Sydney']| | | | | |
 float_settlement_dates | | | | | | |
 float_first_settlement_date | | | | | | |
-float_settlement_business_day_convention | | | | | | |
-float_settlement_business_day_center | | | | | | |
+float_settlement_business_day_convention |One of: 'Following','Preceding','No Adjustment','Modified Following'  | | | | | |
+float_settlement_business_day_center |One Of: ['New York','London','Frankfurt','Rome','Paris','Hong Kong','Tokyo','Singapore','Sydney']| | | | | |
 float_reset_dates | | | | | | |
 float_first_reset_date | | | | | | |
 float_reset_business_day_convention | | | | | | |
-float_reset_business_day_center | | | | | | |
+float_reset_business_day_center |One Of: ['New York','London','Frankfurt','Rome','Paris','Hong Kong','Tokyo','Singapore','Sydney']| | | | | |
 float_spread | | | | | | |
 float_first_period_rate | | | | | | |
 float_index_maturity | | | | | | |
@@ -273,10 +273,10 @@ specified_price | | | | | | |
 averaging_method | | | | | | |
 currency_conversion_provision | | | | | | |
 delivery_date | | | | | | |
-disruption_event | | | | | | |
-disruption_fallback | | | | | | |
+disruption_event | 'None','Price Source Disruption','Benchmark Obligation Default','Dual Exchange Rate','General Inconvertibility','General Nontransferability','General Inconvertibility/Nontransferability','Governmental Authority Default','Illiquidity','Material Change in Circumstance','Nationalization','Price Materiality','Specific Inconvertibility','Specific Nontransferability','Party Specific Event' | | X | | | |
+disruption_fallback | 'Fallback Reference Price','Calculation Agent Determination of Settlement Rate','Assignment of Claim','Deliverable Substitute','Escrow Arrangement','Local Asset Substitute Gross','Local Asset Substitute Net','Local Currency Substitute','No Fault Determination','Non-Deliverable Substitute','Settlement Postponement'] | | | | | |
 disruption_maximum_days | | | | | | |
-electricity_settlement_days | | | | | | |
+electricity_settlement_days | Integer number of days | | | | | |
 electricity_settlement_duration | | | | | | |
 electricity_settlement_start | | | | | | |
 electricity_settlement_stop | | | | | | |
@@ -313,10 +313,10 @@ party_b_auto_early_term | | | | | | |
 termination_currency | | | | | | |
 party_a_additional_term | | | | | | |
 party_b_additional_term | | | | | | |
-party_a_sec_3_e | | | | | | |
-party_a_sec_3_e_rep | | | | | | |
-party_b_sec_3_e | | | | | | |
-party_b_sec_3_e_rep | | | | | | |
+party_a_sec_3_e | See legal language options below | | | | | |
+party_a_sec_3_e_rep | If the party makes reps, freeform text here.  | | | | | |
+party_b_sec_3_e | See legal language options below| | | | | |
+party_b_sec_3_e_rep |If the party makes reps, freeform text here. | | | | | |
 party_a_sec_3_f | | | | | | |
 party_a_sec_3_f_rep | | | | | | |
 party_a_sec_3_f_treaty | | | | | | |
@@ -371,8 +371,8 @@ party_b_additional_credit_support | | | | | | |
 party_b_valuation_percentage | | | | | | |
 party_a_independent_amount | | | | | | |
 party_b_independent_amount | | | | | | |
-party_a_posted_credit_support | | | | | | |
-party_b_posted_credit_support | | | | | | |
+party_a_posted_credit_support |Paragraph 6(c) [will not|will] apply | | | | | |
+party_b_posted_credit_support |Paragraph 6(c) [will not|will] apply | | | | | |
 base_currency | | | | | | |
 valuation_date_city | | | | | | |
 valuation_time_city | | | | | | |
@@ -393,6 +393,97 @@ float_index_id | | | | | | |
 disruption_fallback_price_id | | | | | | |
 strike_price | | | | | | |
 instrument_subtype | | | | | | |
+
+Options for the legal language sections are listed below:
+
+#### sec_3_e
+  ['Does not make any representations',
+   'It is not required by any applicable law, as modified by the practice ' \
+   'of any relevant governmental revenue authority, of any Relevant ' \
+   'Jurisdiction to make any deduction or withholding for or on account ' \
+   'of any Tax from any payment (other than interest under Section 9(h) of ' \
+   'this Agreement) to be made by it to the other party under this ' \
+   'Agreement. In making this representation, it may rely on (i) the ' \
+   'accuracy of any representations made by the other party pursuant to ' \
+   'Section 3(f) of this Agreement, (ii) the satisfaction of the agreement ' \
+   'contained in Section 4(a)(i) or 4(a)(iii) of this Agreement and the ' \
+   'accuracy and effectiveness of any document provided by the other party ' \
+   'pursuant to Section 4(a)(i) or 4(a)(iii) of this Agreement and (iii) ' \
+   'the satisfaction of the agreement of the other party contained in ' \
+   'Section 4(d) of this Agreement, except that it will not be a breach of ' \
+   'this representation where reliance is placed on clause (ii) above and ' \
+   'the other party does not deliver a form or document under Section ' \
+   '4(a)(iii) by reason of material prejudice to its legal or commercial ' \
+   'position.',
+   'Makes the following representations:'
+
+#### sec_3_f
+  ['Does not make any representations',
+
+   'It is fully eligible for the benefits of the “Business Profits” or ' \
+   '“Industrial and Commercial Profits” provision, as the case may be, the ' \
+   '“interest” provision or the “Other Income” provision, if any, of the ' \
+   'Specified Treaty with respect to any payment described in such ' \
+   'provisions and received or to be received by it in connection with ' \
+   'this Agreement and no such payment is attributable to a trade or ' \
+   'business carried on by it through a permanent establishment in the ' \
+   'Specified Jurisdiction.',
+
+   'Each payment received or to be received by it in connection with this ' \
+   'Agreement will be effectively connected with its conduct of a trade or ' \
+   'business in the Specified Jurisdiction.',
+
+   'It is a “U.S. person” (as that term is used in section ' \
+   '1.1441-4(a)(3)(ii) of United States Treasury Regulations) for United ' \
+   'States federal income tax purposes.',
+
+   'It is a “non-U.S. branch of a foreign person” (as that term is used ' \
+   'in section 1.1441-4(a)(3)(ii) of United States Treasury Regulations) ' \
+   'for United States federal income tax purposes.',
+
+   'With respect to payments made to an address outside the United States ' \
+   'or made by a transfer of funds to an account outside the United ' \
+   'States, it is a “non-U.S. branch of a foreign person” (as that term is ' \
+   'used in section 1.1441-4(a)(3)(ii) of United States Treasury ' \
+   'Regulations) for United States federal income tax purposes.',
+
+   'It is a “foreign person” (as that term is used in section ' \
+   '1.6041-4(a)(4) of United States Treasury Regulations) for United ' \
+   'States federal income tax purposes.',
+
+   'Makes the following representations:']
+
+#### recording_conversations
+  ['Not applicable',
+   'Each party (i) consents to the recording of telephone conversations ' \
+   'between the trading, marketing and other relevant personnel of the ' \
+   'parties in connection with this Agreement or any potential Transaction,' \
+   ' (ii) agrees to obtain any necessary consent of, and give any ' \
+   'necessary notice of such recording to, its relevant personnel and ' \
+   '(iii) agrees, to the extent permitted by applicable law, that ' \
+   'recordings may be submitted in evidence in any Proceedings.']
+
+#### settlement_day
+  ['One Local Business day immediately following such date',
+   'Two Local Business days immediately following such date',
+   'The same date']
+
+#### additional_representations
+  ['The Parties do not make any Additional Representations',
+   'The Parties make the following Additional Representations:']
+
+#### netting
+  ['Will not apply',
+   'Will apply to all Transactions',
+   'Will apply to the following Transactions or groups of Transactions:']
+
+#### multiparty_branch
+  ['Party is not a Multibranch Party',
+   'Party is a Multibranch Party and may enter into a Transaction through ' \
+   'any of the following Offices:']
+
+####
+
 
 
 ```json
@@ -419,7 +510,7 @@ forward_rate | Forward Rate
 settlement_type | Settlement Type
 settlement_currency | Settlement Currency
 valuation_date | Valuation Date
-float_index_id | 'Settlement Rate Option
+float_index_id | Settlement Rate Option
 fixed_settlement_business_day_convention | Settlement Adjustment
 fixed_settlement_business_day_center | Settlement Holiday Calendar
 disruption_event | Market Disruption Events
