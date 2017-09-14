@@ -25,6 +25,10 @@ We have language bindings in Shell, Ruby, and Python. You can view code examples
 in the dark area to the right, and you can switch the programming language of
 the examples with the tabs in the top right.
 
+# Codes
+The user should assume that where an ISO standard is available, this API uses that standard. For example, currency codes use the ISO standard: USD, RUB, CAD, etc.
+
+
 # Authentication
 
 > To authorize, use this code:
