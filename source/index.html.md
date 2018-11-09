@@ -26,7 +26,9 @@ in the dark area to the right, and you can switch the programming language of
 the examples with the tabs in the top right.
 
 # Codes
-The user should assume that where an ISO standard is available, this API uses that standard. For example, currency codes use the ISO standard: USD, RUB, CAD, etc.
+The user should assume that where an ISO standard is available, this API uses 
+that standard. For example, currency codes use the ISO 
+standard: USD, RUB, CAD, etc.
 
 
 # Authentication
@@ -36,19 +38,20 @@ The user should assume that where an ISO standard is available, this API uses th
 ```ruby
 require 'direct_swap'
 
-api = DirectSwap::APIClient.authorize!('my-api-key')
+api = DirectSwap::APIClient.authorize!('email','my-api-key')
 ```
 
 ```python
 import directswap
 
-api = directswap.authorize('my-api-key')
+api = directswap.authorize('email','my-api-key')
 ```
 
 ```shell
-# With shell, you can just pass the correct header with each request
-curl "users/sign_in"
-  -H "Authorization: my-api-key"
+# With shell, you can pass the correct headers with each request
+curl "api_endpoint"
+  -H "X-User-Email: <your-email>" 
+  -H "X-User-Token: <my-api-key>"
 ```
 
 > Make sure to replace `my-api-key` with your API key.
@@ -59,9 +62,13 @@ Direct Swap API key at our [developer portal](http://directswap.com/developers).
 Direct Swap expects for the API key to be included in all API requests to the
 server in a header that looks like the following:
 
-`Authorization: my-api-token`
+```
+X-User-Email: <your-email> 
+X-User-Token: <my-api-key>
+```
 
 <aside class="notice">
+You must replace <code>your-email</code> with your account email address.
 You must replace <code>my-api-token</code> with your personal API key.
 </aside>
 
@@ -84,8 +91,9 @@ api.deals.get()
 ```
 
 ```shell
-curl "http://directswap.com/api/deals"
-  -H "Authorization: my-api-token"
+curl "http://directswap.com/deals.json"
+  -H "X-User-Email: <your-email>" 
+  -H "X-User-Token: <my-api-key>"
 ```
 
 > The above command returns JSON structured like this:
@@ -107,7 +115,7 @@ This endpoint retrieves all Deals.
 
 ### HTTP Request
 
-`GET http://directswap.com/api/deals`
+`GET http://directswap.com/deals.json`
 
 ### Query Parameters
 
@@ -120,27 +128,29 @@ include_terms | true | If set to true, the result will also include the term(s) 
 ```ruby
 require 'direct_swap'
 
-api = DirectSwap::APIClient.authorize!('meowmeowmeow')
+api = DirectSwap::APIClient.authorize!('example@example.com','meowmeowmeow')
 api.deals.get(2)
 ```
 
 ```python
 import directswap
 
-api = directswap.authorize('my-api-token')
+api = directswap.authorize('my@email.com','my-api-token')
 api.deals.get(2)
 ```
 
 ```shell
-curl "http://directswap.com/api/deals/2"
-  -H "Authorization: my-api-token"
+curl "http://directswap.com/api/deals/2.json"
+  -H "X-User-Email: <your-email>" 
+  -H "X-User-Token: <my-api-key>"
 ```
 > The above command returns JSON structured like this:
 
 ```json
 {
   "id": 2,
-  "name": "",
+  "name": "FOREX 123 Deal",
+  
 }
 ```
 
@@ -148,7 +158,7 @@ This endpoint retrieves a specific Deal.
 
 ### HTTP Request
 
-`GET http://directswap.com/deals/<ID>`
+`GET http://directswap.com/deals/<ID>.json`
 
 ### URL Parameters
 
@@ -161,20 +171,21 @@ ID | The ID of the Deal to retrieve
 ```ruby
 require 'direct_swap'
 
-api = DirectSwap::APIClient.authorize!('meowmeowmeow')
+api = DirectSwap::APIClient.authorize!('email@address.com','meowmeowmeow')
 api.deals.create(deal_hash)
 ```
 
 ```shell
-curl "http://directswap.com/api/deals"
-  -H "Authorization: my-api-token"
+curl "http://directswap.com/api/deals.json"
+  -H "X-User-Email: <your-email>" 
+  -H "X-User-Token: <my-api-key>"
   --data 'param1=a&param2=b&param3=c'
 ```
 
 ```python
 import directswap
 
-api = directswap.authorize('my-api-token')
+api = directswap.authorize('my@email.com','my-api-token')
 api.deals.create(deal_hash)
 ```
 
@@ -184,13 +195,13 @@ created, structured like this:
 ```json
 {
   "id": 2,
-  "name": "",
+  "name": "New FOREX Deal",
 }
 ```
 
 ### HTTP Request
 
-`POST http://directswap.com/deals`
+`POST http://directswap.com/deals.json`
 
 ### URL Parameters
 
@@ -538,10 +549,10 @@ Parameter | Description |
 
 ### HTTP Request
 
-`GET http://directswap.com/api/products`
+`GET http://directswap.com/products.json`
 
-> The above command returns a JSON representation of the deal that was just
-created, structured like this:
+> The above command returns a JSON representation of the product tree, 
+structured like this:
 
 ```json
 { products:
@@ -590,7 +601,7 @@ created, structured like this:
 
 ### HTTP Request
 
-`GET http://directswap.com/api/instruments`
+`GET http://directswap.com/instruments.json`
 
 > The above command returns a JSON representation of the deal that was just
 created, structured like this:
