@@ -62,7 +62,7 @@ Direct Swap API key at our [developer portal](http://directswap.com/developers).
 Direct Swap expects for the API key to be included in all API requests to the
 server in a header that looks like the following:
 
-```
+```shell
 X-User-Email: <your-email> 
 X-User-Token: <my-api-key>
 ```
